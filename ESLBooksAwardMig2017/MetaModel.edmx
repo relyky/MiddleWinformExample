@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MetaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BOOKLIST">
+          <Key>
+            <PropertyRef Name="項次" />
+          </Key>
+          <Property Name="項次" Type="int" Nullable="false" />
+          <Property Name="大分類" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="中分類" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="獨立編號" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="圖檔名" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductGuid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="順序" Type="int" Nullable="false" />
+          <Property Name="屬性" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="推薦書籍" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ISBN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MCH" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="分類" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="出版日期" Type="date" Nullable="false" />
+          <Property Name="出版社" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="推薦單位" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="推薦總編" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="職銜" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="總編推薦文" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="推薦職人店別" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="職人姓名" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="職人推薦文" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="推薦作者" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tag" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="書落" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MetaModelStoreContainer">
+          <EntitySet Name="BOOKLIST" EntityType="Self.BOOKLIST" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MetaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BOOKLIST">
+          <Key>
+            <PropertyRef Name="項次" />
+          </Key>
+          <Property Name="項次" Type="Int32" Nullable="false" />
+          <Property Name="大分類" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="中分類" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="獨立編號" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="圖檔名" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ProductGuid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="順序" Type="Int32" Nullable="false" />
+          <Property Name="屬性" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="推薦書籍" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ISBN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MCH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="分類" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="出版日期" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="出版社" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="推薦單位" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="推薦總編" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="職銜" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="總編推薦文" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="推薦職人店別" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="職人姓名" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="職人推薦文" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="推薦作者" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tag" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="書落" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MetaDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BOOKLIST" EntityType="Self.BOOKLIST" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MetaModelStoreContainer" CdmEntityContainer="MetaDatabaseEntities">
+          <EntitySetMapping Name="BOOKLIST">
+            <EntityTypeMapping TypeName="MetaModel.BOOKLIST">
+              <MappingFragment StoreEntitySet="BOOKLIST">
+                <ScalarProperty Name="項次" ColumnName="項次" />
+                <ScalarProperty Name="大分類" ColumnName="大分類" />
+                <ScalarProperty Name="中分類" ColumnName="中分類" />
+                <ScalarProperty Name="獨立編號" ColumnName="獨立編號" />
+                <ScalarProperty Name="圖檔名" ColumnName="圖檔名" />
+                <ScalarProperty Name="ProductGuid" ColumnName="ProductGuid" />
+                <ScalarProperty Name="順序" ColumnName="順序" />
+                <ScalarProperty Name="屬性" ColumnName="屬性" />
+                <ScalarProperty Name="推薦書籍" ColumnName="推薦書籍" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="MCH" ColumnName="MCH" />
+                <ScalarProperty Name="分類" ColumnName="分類" />
+                <ScalarProperty Name="出版日期" ColumnName="出版日期" />
+                <ScalarProperty Name="出版社" ColumnName="出版社" />
+                <ScalarProperty Name="推薦單位" ColumnName="推薦單位" />
+                <ScalarProperty Name="推薦總編" ColumnName="推薦總編" />
+                <ScalarProperty Name="職銜" ColumnName="職銜" />
+                <ScalarProperty Name="總編推薦文" ColumnName="總編推薦文" />
+                <ScalarProperty Name="推薦職人店別" ColumnName="推薦職人店別" />
+                <ScalarProperty Name="職人姓名" ColumnName="職人姓名" />
+                <ScalarProperty Name="職人推薦文" ColumnName="職人推薦文" />
+                <ScalarProperty Name="推薦作者" ColumnName="推薦作者" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="書落" ColumnName="書落" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
